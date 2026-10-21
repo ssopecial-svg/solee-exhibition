@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그냥 스튜디오</title>
+  
+  <!-- Tailwind CSS 불러오기 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- React, ReactDOM, Babel(JSX 변환기) 불러오기 -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <!-- 리액트 앱이 렌더링될 공간 -->
+  <div id="root"></div>
+
+  <!-- type="text/babel" 을 꼭 써주어야 JSX가 해석됩니다 -->
+  <script type="text/babel">
+    function App() {
+      return (
+        <div className="min-h-screen bg-[#FF7300] text-black font-mixed selection:bg-black selection:text-white">
+          <style dangerouslySetInnerHTML={{ __html: `
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
+            
+            @font-face {
+                font-family: 'SSRONET_Handwritten';
+                src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/SSRONET_Handwritten.woff2') format('woff2');
+                font-weight: 400;
+                font-style: normal;
+            }
+            
+            .font-mixed {
+              font-family: 'Josefin Sans', 'SSRONET_Handwritten', sans-serif;
+            }
+            
+            body {
+              background-color: #FF7300;
+              margin: 0;
+            }
+          `}} />
+
+          <div className="max-w-2xl mx-auto min-h-screen flex flex-col px-6 py-10 md:py-12">
+            
+            {/* Header */}
+            <header className="flex justify-between items-center text-sm md:text-base font-semibold tracking-wide">
+              <span>So hyejin</span>
+              <span>Lee euigyun</span>
+            </header>
+
+            {/* Title Image */}
+            <div className="text-center mt-12 mb-12 md:mt-16 md:mb-16 flex justify-center">
+              <img 
+                src="그냥스튜디오 자필.png" 
+                alt="그냥스튜디오 자필" 
+                className="w-full max-w-[16rem] md:max-w-lg mx-auto object-contain"
+              />
+            </div>
+
+            {/* Main Image */}
+            <div className="w-full aspect-[16/9] md:aspect-[2.5/1] mb-12 border border-black/10 shadow-[0_8px_30px_rgba(0,0,0,0.15)] overflow-hidden">
+              <img 
+                src="초대장 이미지.png" 
+                alt="Exhibition space alley" 
+                className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700 ease-out grayscale-[15%] sepia-[15%]"
+              />
+            </div>
+
+            {/* Description */}
+            <div className="text-center mb-16 space-y-3 text-[15px] md:text-lg leading-relaxed tracking-tight break-keep">
+              <p>
+                {"'그냥 좋아서'"} 시작한 일들이 모여 작은 전시가 되었습니다.
+              </p>
+              <p>
+                완벽하기보다, 있는 그대로의 자연스러움을 담은 공간으로 당신을 초대합니다.<br/>
+                가벼운 발걸음으로 오셔서 저희의 첫 번째 이야기를 함께 나누어 주세요.
+              </p>
+            </div>
+
+            {/* 하단 정보 영역 */}
+            <div className="mt-auto">
+              <div className="flex justify-between items-end mb-4 text-base md:text-[1.1rem] tracking-wide">
+                <div className="text-left leading-tight">
+                  <p>2026. 10. 26</p>
+                  <p>~ 11. 8</p>
+                </div>
+                
+                <div className="text-right leading-tight">
+                  <p>At,</p>
+                  <p>Alexroom</p>
+                </div>
+              </div>
+
+              <div className="border-t-[1.5px] border-black pb-4 w-full"></div>
+
+              <footer className="flex justify-between items-center text-sm md:text-base tracking-wider mb-8">
+                <span>PM 12:00</span>
+                <span>@justdesign_</span>
+                <span>PM 9:00</span>
+              </footer>
+
+              {/* 링크 버튼 영역 (지도 & 인스타) */}
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a 
+                  href="https://naver.me/59vFOzWw" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-white bg-black rounded-full w-full sm:w-auto overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_8px_20px_rgba(0,0,0,0.3)] active:scale-95"
+                >
+                  <span className="relative flex items-center gap-2">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    전시 장소 지도 보기
+                  </span>
+                </a>
+
+                <a 
+                  href="https://www.instagram.com/justdesgin_?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw==" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-white bg-black rounded-full w-full sm:w-auto overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_8px_20px_rgba(0,0,0,0.3)] active:scale-95"
+                >
+                  <span className="relative flex items-center gap-2">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></line>
+                    </svg>
+                    메인포스터 보러가기
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // 화면에 렌더링
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
